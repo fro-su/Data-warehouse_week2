@@ -1,4 +1,4 @@
 
-target/
-dbt_packages/
-logs/
+target-to-ignore/
+dbt_packages-to-ignore/
+logs-to-ignore/
