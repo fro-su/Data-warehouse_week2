@@ -1,16 +1,16 @@
-[2022-11-14 11:18:13,867] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dbt_dag.dbt_run manual__2022-11-14T11:18:12.005533+00:00 [queued]>
-[2022-11-14 11:18:13,886] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dbt_dag.dbt_run manual__2022-11-14T11:18:12.005533+00:00 [queued]>
-[2022-11-14 11:18:13,886] {taskinstance.py:1241} INFO - 
+[2023-12-14 11:18:13,867] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dbt_dag.dbt_run manual__2023-12-14T11:18:12.005533+00:00 [queued]>
+[2023-12-14 11:18:13,886] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dbt_dag.dbt_run manual__2023-12-14T11:18:12.005533+00:00 [queued]>
+[2023-12-14 11:18:13,886] {taskinstance.py:1241} INFO - 
 --------------------------------------------------------------------------------
-[2022-11-14 11:18:13,886] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
-[2022-11-14 11:18:13,886] {taskinstance.py:1243} INFO - 
+[2023-12-14 11:18:13,886] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-12-14 11:18:13,886] {taskinstance.py:1243} INFO - 
 --------------------------------------------------------------------------------
-[2022-11-14 11:18:13,913] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): dbt_run> on 2022-11-14 11:18:12.005533+00:00
-[2022-11-14 11:18:13,924] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'dbt_dag', 'dbt_run', 'manual__2022-11-14T11:18:12.005533+00:00', '--job-id', '307', '--raw', '--subdir', 'DAGS_FOLDER/dbt_transform.py', '--cfg-path', '/tmp/tmp2wxmz0gz', '--error-file', '/tmp/tmp0awuysv9']
-[2022-11-14 11:18:13,919] {standard_task_runner.py:52} INFO - Started process 150 to run task
-[2022-11-14 11:18:13,925] {standard_task_runner.py:77} INFO - Job 307: Subtask dbt_run
-[2022-11-14 11:18:13,985] {logging_mixin.py:109} INFO - Running <TaskInstance: dbt_dag.dbt_run manual__2022-11-14T11:18:12.005533+00:00 [running]> on host b1d920162f4e
-[2022-11-14 11:18:14,024] {taskinstance.py:1686} ERROR - Task failed with exception
+[2023-12-14 11:18:13,913] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): dbt_run> on 2023-12-14 11:18:12.005533+00:00
+[2023-12-14 11:18:13,924] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'dbt_dag', 'dbt_run', 'manual__2023-12-14T11:18:12.005533+00:00', '--job-id', '307', '--raw', '--subdir', 'DAGS_FOLDER/dbt_transform.py', '--cfg-path', '/tmp/tmp2wxmz0gz', '--error-file', '/tmp/tmp0awuysv9']
+[2023-12-14 11:18:13,919] {standard_task_runner.py:52} INFO - Started process 150 to run task
+[2023-12-14 11:18:13,925] {standard_task_runner.py:77} INFO - Job 307: Subtask dbt_run
+[2023-12-14 11:18:13,985] {logging_mixin.py:109} INFO - Running <TaskInstance: dbt_dag.dbt_run manual__2023-12-14T11:18:12.005533+00:00 [running]> on host b1d920162f4e
+[2023-12-14 11:18:14,024] {taskinstance.py:1686} ERROR - Task failed with exception
 Traceback (most recent call last):
   File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
     cursor, statement, parameters, context
@@ -69,15 +69,15 @@ LINE 1: ...g_id = 'dbt_dag' AND xcom.task_id = 'dbt_run' AND xcom.execu...
 [SQL: DELETE FROM xcom WHERE xcom.dag_id = %(dag_id_1)s AND xcom.task_id = %(task_id_1)s AND xcom.execution_date = %(execution_date_1)s]
 [parameters: {'dag_id_1': 'dbt_dag', 'task_id_1': 'dbt_run', 'execution_date_1': datetime.datetime(2022, 11, 14, 11, 18, 12, 5533, tzinfo=Timezone('UTC'))}]
 (Background on this error at: http://sqlalche.me/e/13/f405)
-[2022-11-14 11:18:14,060] {taskinstance.py:1280} INFO - Marking task as FAILED. dag_id=dbt_dag, task_id=dbt_run, execution_date=20221114T111812, start_date=20221114T111813, end_date=20221114T111814
-[2022-11-14 11:18:14,088] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/email.py:102: PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2023-12-14 11:18:14,060] {taskinstance.py:1280} INFO - Marking task as FAILED. dag_id=dbt_dag, task_id=dbt_run, execution_date=20221114T111812, start_date=20221114T111813, end_date=20221114T111814
+[2023-12-14 11:18:14,088] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/email.py:102: PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
   send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
 
-[2022-11-14 11:18:14,088] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
-[2022-11-14 11:18:14,088] {email.py:208} INFO - Email alerting: attempt 1
-[2022-11-14 11:18:14,102] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
-[2022-11-14 11:18:14,102] {email.py:208} INFO - Email alerting: attempt 1
-[2022-11-14 11:18:14,103] {taskinstance.py:1739} ERROR - Failed to send email to: ['natnaelmasresha@gmail.com']
+[2023-12-14 11:18:14,088] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
+[2023-12-14 11:18:14,088] {email.py:208} INFO - Email alerting: attempt 1
+[2023-12-14 11:18:14,102] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
+[2023-12-14 11:18:14,102] {email.py:208} INFO - Email alerting: attempt 1
+[2023-12-14 11:18:14,103] {taskinstance.py:1739} ERROR - Failed to send email to: ['natnaelmasresha@gmail.com']
 Traceback (most recent call last):
   File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
     cursor, statement, parameters, context
@@ -188,7 +188,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.6/socket.py", line 713, in create_connection
     sock.connect(sa)
 OSError: [Errno 99] Cannot assign requested address
-[2022-11-14 11:18:14,131] {standard_task_runner.py:91} ERROR - Failed to execute job 307 for task dbt_run
+[2023-12-14 11:18:14,131] {standard_task_runner.py:91} ERROR - Failed to execute job 307 for task dbt_run
 Traceback (most recent call last):
   File "/home/airflow/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
     cursor, statement, parameters, context
@@ -261,5 +261,5 @@ LINE 1: ...g_id = 'dbt_dag' AND xcom.task_id = 'dbt_run' AND xcom.execu...
 [SQL: DELETE FROM xcom WHERE xcom.dag_id = %(dag_id_1)s AND xcom.task_id = %(task_id_1)s AND xcom.execution_date = %(execution_date_1)s]
 [parameters: {'dag_id_1': 'dbt_dag', 'task_id_1': 'dbt_run', 'execution_date_1': datetime.datetime(2022, 11, 14, 11, 18, 12, 5533, tzinfo=Timezone('UTC'))}]
 (Background on this error at: http://sqlalche.me/e/13/f405)
-[2022-11-14 11:18:14,145] {local_task_job.py:154} INFO - Task exited with return code 1
-[2022-11-14 11:18:14,230] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-12-14 11:18:14,145] {local_task_job.py:154} INFO - Task exited with return code 1
+[2023-12-14 11:18:14,230] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
